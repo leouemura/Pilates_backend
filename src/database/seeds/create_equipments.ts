@@ -1,7 +1,7 @@
 import Knex from 'knex';
 
 export async function seed(knex:Knex){
-
+    await knex('equipments').delete();
     await knex('equipments').insert([
         {title: 'Bola de Pilates', image: 'Bola-de-Pilates.png'},
         {title: 'Cadillac', image: 'Cadillac.png'},
