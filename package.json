@@ -7,7 +7,8 @@
     "server": "ts-node-dev src/server.ts",
     "knex:migrate": "knex --knexfile knexfile.ts migrate:latest",
     "knex:migrate_up": "knex --knexfile knexfile.ts migrate:up",
-    "knex:migrate_rollback": "knex --knexfile knexfile.ts migrate:rollback --all",
+    "knex:migrate_rollback_last": "knex --knexfile knexfile.ts migrate:rollback",
+    "knex:migrate_rollback_all": "knex --knexfile knexfile.ts migrate:rollback --all",
     "knex:seed": "knex --knexfile knexfile.ts seed:run"
   },
   "keywords": [],

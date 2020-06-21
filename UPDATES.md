@@ -1,19 +1,25 @@
 # UPDATES
+CustomerController.ts
 - POST 
-    > Registro de profissional com verificação de usuario e senha.
-    > Escolha de equipamentos que o profissional possui.
+    > Registro de cliente/aluno atrelado ao id do profissional/professor.
+    > Verificação de nome e sobrenome.
 
 - GET
-    > Seleciona todos os profissionais
+    > Seleciona todos os alunos de um profissional.
 
+
+SessionController.ts
+- POST
+    > Controle de Sessão do profissional/professor. Inserção de usuario e senha para validação.
 ------------------------------------------------------------------------
 
 # FUTURE IMPLEMENTATIONS FOR THIS UPDATE 
+CustomerController.ts
+- POST
+    > Adicionar turma ou dias da semana contratados pelo aluno.
+
 - ADD PUT
-    > Atualizar usuario e senha. (Authorization Header)
-    > Permitir adicionar ou remover equipamentos
-- GET
-    > Selecionar todos os profissionais e seus respectivos equipamentos
+    > Atualizar dados do cliente/aluno
 
 ------------------------------------------------------------------------
 
@@ -38,3 +44,19 @@ JSON body:
 ### /user_equipments
 { user_id, equipment_id }
 
+### /session
+{ username, password }
+
+### /customers
+{ id, name, lastname, email, whatsapp, user_id }
+
+JSON body:
+{
+	"name":"",
+	"lastname":"",
+	"email":"",
+	"whatsapp":""
+}
+
+Header:
+Authorization: user_id
